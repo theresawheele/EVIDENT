@@ -1,90 +1,46 @@
-/* =================== Reset =================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Helvetica Neue", sans-serif;
-}
-
-/* =================== ETH Blue Palette =================== */
-:root {
-  --eth-dark: #00274d;
-  --eth-blue: #0071ce;
-  --eth-light: #e6f0fa;
-  --eth-grey: #f7f7f7;
-  --eth-white: #ffffff;
-}
-
-/* =================== Global Header =================== */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--eth-dark);
-  padding: 15px 30px;
-  position: fixed; /* keeps header on top */
-  width: 100%;
-  z-index: 100;
-}
-
-header nav a {
-  color: var(--eth-white);
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-header nav a:hover {
-  color: var(--eth-blue);
-}
-
-/* Logo link fully clickable */
-.logo-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: var(--eth-white);
-}
-
-.logo-link h1 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-.logo-link:hover {
-  color: var(--eth-blue);
-}
-
 /* =================== Index Page Hero =================== */
 body.index-page {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: var(--eth-blue);
   background-image: url('assets/ed-busy.jpg');
   background-size: cover;
   background-position: center;
-  background-blend-mode: overlay; /* semi-transparent effect */
+  background-blend-mode: overlay; 
   position: relative;
 }
 
+/* Overlay is just visual, not blocking clicks */
 body.index-page .overlay {
-  text-align: center;
-  padding: 50px 30px;
-  border-radius: 15px;
-  color: var(--eth-white);
-  animation: fadeIn 2s ease-in-out;
-  z-index: 10; /* ensure text above header background */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 39, 77, 0.6);
+  pointer-events: none; /* <-- THIS IS CRUCIAL */
+  z-index: 1;
 }
 
-body.index-page .overlay h1 {
+/* Only the content inside overlay is clickable/selectable */
+body.index-page .overlay-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 50px 30px;
+  color: var(--eth-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+body.index-page .overlay-content h1 {
   font-size: 5rem;
   margin-bottom: 20px;
 }
 
-body.index-page .overlay p {
+body.index-page .overlay-content p {
   font-size: 1.5rem;
   margin-bottom: 30px;
 }
@@ -97,6 +53,7 @@ body.index-page .btn {
   font-weight: bold;
   border-radius: 10px;
   transition: 0.3s;
+  z-index: 3;
 }
 
 body.index-page .btn:hover {
@@ -104,58 +61,40 @@ body.index-page .btn:hover {
   color: var(--eth-dark);
 }
 
-/* =================== Main Page =================== */
-main {
-  padding: 100px 20px 50px; /* top padding to avoid fixed header */
-  background-color: var(--eth-grey);
-}
-
-.card {
-  background-color: var(--eth-white);
-  padding: 30px;
-  margin-bottom: 30px;
-  border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-.card h2 {
-  color: var(--eth-dark);
-  margin-bottom: 15px;
-}
-
-.card p {
-  color: #333;
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-top: 15px;
-}
-
-/* Clickable cards */
-.card.clickable {
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card.clickable:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-/* =================== Footer =================== */
-footer {
-  text-align: center;
-  padding: 20px;
+/* =================== Header =================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: var(--eth-dark);
-  color: var(--eth-white);
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  z-index: 10; /* above overlay */
 }
 
-/* =================== Animations =================== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
+.logo-link {
+  text-decoration: none;
+  color: var(--eth-white);
+  display: flex;
+  align-items: center;
+}
+
+.logo-link h1 {
+  margin: 0;
+}
+
+.logo-link:hover {
+  color: var(--eth-blue);
+}
+
+header nav a {
+  color: var(--eth-white);
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  color: var(--eth-blue);
 }
