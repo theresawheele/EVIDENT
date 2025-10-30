@@ -80,6 +80,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: var(--eth-dark);
+  color: var(--eth-light);
   padding: 15px 30px;
   position: fixed;
   width: 100%;
