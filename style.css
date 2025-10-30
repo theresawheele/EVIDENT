@@ -1,4 +1,4 @@
-/* Reset */
+/* =================== Reset =================== */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
   font-family: "Helvetica Neue", sans-serif;
 }
 
-/* ETH Blue Palette */
+/* =================== ETH Blue Palette =================== */
 :root {
   --eth-dark: #00274d;
   --eth-blue: #0071ce;
@@ -15,39 +15,82 @@
   --eth-white: #ffffff;
 }
 
-/* Index page moving background */
+/* =================== Global Header =================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--eth-dark);
+  padding: 15px 30px;
+  position: fixed; /* keeps header on top */
+  width: 100%;
+  z-index: 100;
+}
+
+header nav a {
+  color: var(--eth-white);
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: var(--eth-blue);
+}
+
+/* Logo link fully clickable */
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--eth-white);
+}
+
+.logo-link h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.logo-link:hover {
+  color: var(--eth-blue);
+}
+
+/* =================== Index Page Hero =================== */
 body.index-page {
   height: 100vh;
-  background: url('assets/ed-busy.jpg') no-repeat center center fixed;
-  background-size: cover;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--eth-blue);
+  background-image: url('assets/ed-busy.jpg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay; /* semi-transparent effect */
+  position: relative;
 }
 
 body.index-page .overlay {
-  background-color: rgba(0, 39, 77, 0.6); /* dark overlay */
   text-align: center;
-  padding: 50px;
+  padding: 50px 30px;
   border-radius: 15px;
+  color: var(--eth-white);
   animation: fadeIn 2s ease-in-out;
+  z-index: 10; /* ensure text above header background */
 }
 
-body.index-page h1 {
+body.index-page .overlay h1 {
   font-size: 5rem;
-  color: var(--eth-white);
   margin-bottom: 20px;
 }
 
-body.index-page p {
+body.index-page .overlay p {
   font-size: 1.5rem;
-  color: var(--eth-light);
   margin-bottom: 30px;
 }
 
 body.index-page .btn {
-  background-color: var(--eth-blue);
+  background-color: var(--eth-dark);
   color: var(--eth-white);
   padding: 15px 30px;
   text-decoration: none;
@@ -57,33 +100,13 @@ body.index-page .btn {
 }
 
 body.index-page .btn:hover {
-  background-color: var(--eth-dark);
+  background-color: var(--eth-white);
+  color: var(--eth-dark);
 }
 
-/* Main page */
-header {
-  background-color: var(--eth-dark);
-  color: var(--eth-white);
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header nav a {
-  color: var(--eth-white);
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-header nav a:hover {
-  color: var(--eth-blue);
-}
-
+/* =================== Main Page =================== */
 main {
-  padding: 50px 20px;
+  padding: 100px 20px 50px; /* top padding to avoid fixed header */
   background-color: var(--eth-grey);
 }
 
@@ -112,19 +135,7 @@ main {
   margin-top: 15px;
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: var(--eth-dark);
-  color: var(--eth-white);
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-/* Make cards clickable */
+/* Clickable cards */
 .card.clickable {
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -135,30 +146,16 @@ footer {
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* Make header link look nice */
-header h1 a {
-  text-decoration: none;
+/* =================== Footer =================== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--eth-dark);
   color: var(--eth-white);
-  transition: 0.3s;
 }
 
-/* Make the entire logo area clickable */
-.logo-container {
-  display: inline-block;       /* ensures clickable area wraps content */
-  text-decoration: none;
-  color: var(--eth-white);
-  transition: color 0.3s;
+/* =================== Animations =================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-
-.logo-container h1 {
-  margin: 0;
-  padding: 10px 20px;          /* optional: expands clickable area */
-}
-
-.logo-container:hover {
-  color: var(--eth-blue);
-}
-
-
-
-
