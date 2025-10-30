@@ -119,7 +119,7 @@ main.container {
 /* Sections / Cards */
 .section, .card {
   background-color: var(--eth-white);
-  color: var(--eth-light);
+  color: var(--eth-dark);
   border-radius: 30px;
   margin-bottom: 60px;
   padding: 100px 20px 50px; /* Top padding for fixed header */
@@ -129,18 +129,18 @@ main.container {
 
 .section img, .card img {
   width: 100%;
-  color: var(--eth-light);
+  color: var(--eth-dark);
   border-radius: 30px;
   margin-bottom: 15px;
 }
 
 .section h2, .card h2 {
-  color: var(--eth-light);
+  color: var(--eth-dark);
   margin-bottom: 10px;
 }
 
 .section p, .card p {
-  color: var(--eth-light);
+  color: var(--eth-dark);
 }
 
 /* Make sections clickable */
