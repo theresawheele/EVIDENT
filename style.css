@@ -112,6 +112,7 @@ header nav a:hover {
 main.container {
   max-width: 1200px;
   margin: 0 auto;
+  color: var(--eth-light);
   padding: 100px 20px 50px; /* Top padding for fixed header */
 }
 
