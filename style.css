@@ -166,3 +166,127 @@ body.index-page .btn:hover {
   background-color: var(--eth-white);
   color: var(--eth-dark);
 }
+
+/* GENERAL STYLES */
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222;
+  background-color: #f9f9f9;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background: #003366;
+  color: white;
+}
+
+header h1 {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.intro, .info {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  line-height: 1.6;
+}
+
+.intro img, .info img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 1rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* LANDING PAGE */
+body.landing {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+body.landing::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 110%; height: 110%;
+  background-image: url("assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  animation: moveBg 30s ease-in-out infinite alternate;
+  z-index: -2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 51, 102, 0.5);
+  z-index: -1;
+}
+
+@keyframes moveBg {
+  0% { transform: scale(1) translate(0,0); }
+  100% { transform: scale(1.1) translate(-2%, -2%); }
+}
+
+.content {
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.content h1 {
+  font-size: 4rem;
+  letter-spacing: 3px;
+  margin-bottom: 0.5rem;
+}
+
+.content h2 {
+  font-weight: 300;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.button {
+  background: white;
+  color: #003366;
+  padding: 0.8rem 1.6rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: #e6f0ff;
+  transform: translateY(-2px);
+}
