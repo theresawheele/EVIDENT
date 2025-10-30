@@ -160,7 +160,7 @@ footer {
   text-align: center;
   padding: 20px;
   background-color: var(--eth-dark);
-  color: var(--eth-dark);
+  color: var(--eth-white);
 }
 
 /* =================== Buttons (general) =================== */
