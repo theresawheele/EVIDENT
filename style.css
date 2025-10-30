@@ -9,8 +9,8 @@
 
 /* =================== Global Styles =================== */
 * {
-  margin: 0;
-  padding: 0;
+  margin: 30;
+  padding: 30;
   box-sizing: border-box;
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
@@ -18,7 +18,7 @@
 body {
   background-color: var(--eth-white); /* Default background for main pages */
   color: #000000; /* Default text color black */
-  line-height: 1.6;
+  line-height: 2;
 }
 
 /* =================== Index Page (Splash) =================== */
