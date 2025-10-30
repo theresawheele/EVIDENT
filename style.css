@@ -146,3 +146,17 @@ header h1 a:hover {
   color: var(--eth-blue);
 }
 
+/* Make the header link clickable and styled */
+header h1 a.logo-link {
+  text-decoration: none;
+  color: var(--eth-white);
+  display: inline-block;      /* ensures the whole h1 area is clickable */
+  padding: 0;                 /* optional, remove padding interference */
+  transition: color 0.3s;
+}
+
+header h1 a.logo-link:hover {
+  color: var(--eth-blue);
+}
+
+
