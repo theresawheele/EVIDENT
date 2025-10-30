@@ -18,7 +18,7 @@
 body {
   background-color: var(--eth-white); /* Default background for main pages */
   color: #000000; /* Default text color black */
-  line-height: 60;
+  line-height: 1.6;
 }
 
 /* =================== Index Page (Splash) =================== */
@@ -49,8 +49,8 @@ body.index-page .overlay-content {
 }
 
 body.index-page h1 {
-  font-size: 5rem;
-  margin-bottom: 20px;
+  font-size: 10rem;
+  margin-bottom: 50px;
 }
 
 body.index-page p {
@@ -71,7 +71,7 @@ body.index-page .btn {
 
 body.index-page .btn:hover {
   background-color: var(--eth-white);
-  color: var(--eth-dark);
+  color: var(--eth-light);
 }
 
 /* =================== Header =================== */
