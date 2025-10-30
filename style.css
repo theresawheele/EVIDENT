@@ -142,21 +142,23 @@ header h1 a {
   transition: 0.3s;
 }
 
-header h1 a:hover {
-  color: var(--eth-blue);
-}
-
-/* Make the header link clickable and styled */
-header h1 a.logo-link {
+/* Make the entire logo area clickable */
+.logo-container {
+  display: inline-block;       /* ensures clickable area wraps content */
   text-decoration: none;
   color: var(--eth-white);
-  display: inline-block;      /* ensures the whole h1 area is clickable */
-  padding: 0;                 /* optional, remove padding interference */
   transition: color 0.3s;
 }
 
-header h1 a.logo-link:hover {
+.logo-container h1 {
+  margin: 0;
+  padding: 10px 20px;          /* optional: expands clickable area */
+}
+
+.logo-container:hover {
   color: var(--eth-blue);
 }
+
+
 
 
