@@ -140,7 +140,7 @@ main.container {
 }
 
 .section h2, .card h2 {
-  color: var(--eth-dark);
+  color: var(--eth-light);
   margin-bottom: 10px;
 }
 
@@ -165,7 +165,7 @@ footer {
   text-align: center;
   padding: 20px;
   background-color: var(--eth-dark);
-  color: var(--eth-white);
+  color: var(--eth-dark);
 }
 
 /* =================== Buttons (general) =================== */
