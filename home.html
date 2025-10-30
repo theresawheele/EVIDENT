@@ -7,26 +7,53 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <header>
-  <h1><a href="index.html" class="logo-link">EVIDENT</a></h1>
-  <nav>
-    <a href="about.html">About</a>
-    <a href="competition.html">Competition</a>
-    <a href="team.html">Team</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
 
-  <main>
-    <!-- About Section -->
-    <section class="card clickable" onclick="location.href='about.html'">
-      <h2>About the Project</h2>
-      <p>
-        EVIDENT is an international research project (SNF 2025–2028) led by ETH Zurich, the University of Cambridge, Northumbria University, and healthcare and architecture partners.
-      </p>
-      <img src="assets/hospital1.jpg" alt="Hospital design concept">
-    </section>
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo-link"><h1>EVIDENT</h1></a>
+    <nav>
+      <a href="competition.html">Competition</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main class="container">
 
     <!-- Competition Section -->
-    <section class="card clickable" onclick="location.href='competition.html'">
-      <h2>Architectural Comp
+    <div class="section clickable">
+      <a href="competition.html">
+        <img src="assets/layout.jpg" alt="Competition Design">
+        <h2>Competition</h2>
+        <p>Click here to see the architectural competition details.</p>
+      </a>
+    </div>
+
+    <!-- Team Section -->
+    <div class="section clickable">
+      <a href="team.html">
+        <img src="assets/team.jpg" alt="Our Team">
+        <h2>Team</h2>
+        <p>Click here to meet our team members.</p>
+      </a>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="section clickable">
+      <a href="contact.html">
+        <img src="assets/hospital1.jpg" alt="Contact">
+        <h2>Contact</h2>
+        <p>Click here to get in touch with us.</p>
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 EVIDENT Project | ETH Zurich</p>
+  </footer>
+
+</body>
+</html>
