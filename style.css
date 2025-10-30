@@ -18,7 +18,7 @@
 body {
   background-color: var(--eth-white); /* Default background for main pages */
   color: #000000; /* Default text color black */
-  line-height: 2;
+  line-height: 60;
 }
 
 /* =================== Index Page (Splash) =================== */
