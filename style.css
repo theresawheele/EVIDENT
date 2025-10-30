@@ -1,27 +1,38 @@
-/* ETH-inspired palette */
-:root{
---eth-blue: #0c3c78;
---muted: #6b6b6b;
---bg: #ffffff;
---surface: #f6f7f9;
---accent: #1659a8;
---max-width: 1100px;
+/* =================== ETH Color Palette =================== */
+:root {
+  --eth-dark: #00274d;     /* Dark blue for header/footer/buttons */
+  --eth-blue: #0071ce;     /* Standard ETH blue */
+  --eth-light: #e6f0ff;    /* Light ETH blue for splash page */
+  --eth-grey: #f7f7f7;     /* Light grey for main content background if needed */
+  --eth-white: #ffffff;    /* White text/background */
 }
 
-/* =================== Index Page Hero =================== */
+/* =================== Global Styles =================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  background-color: var(--eth-white); /* Default background for main pages */
+  color: #000000; /* Default text color black */
+  line-height: 1.6;
+}
+
+/* =================== Index Page (Splash) =================== */
 body.index-page {
   height: 100vh;
-  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--eth-blue);  
-  background-image: url('assets/ed-busy.jpg'); 
+  background-color: var(--eth-light);  /* Light ETH blue */
+  background-image: url('assets/ed-busy.jpg'); /* Optional background image */
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay; 
   position: relative;
-  font-family: Arial, sans-serif;
 }
 
 body.index-page .overlay {
@@ -30,7 +41,7 @@ body.index-page .overlay {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 39, 77, 0.6); 
+  background-color: rgba(0, 39, 77, 0.4); /* semi-transparent overlay */
   pointer-events: none;
 }
 
@@ -38,7 +49,7 @@ body.index-page .overlay-content {
   position: relative;
   z-index: 2;
   text-align: center;
-  color: var(--eth-white);  
+  color: var(--eth-white);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,18 +57,38 @@ body.index-page .overlay-content {
   height: 100%;
 }
 
-body.index-page .overlay-content h1 {
+body.index-page h1 {
   font-size: 5rem;
   margin-bottom: 20px;
 }
 
+body.index-page p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+body.index-page .btn {
+  background-color: var(--eth-dark);
+  color: var(--eth-white);
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: 0.3s;
+  pointer-events: auto; /* make button clickable */
+}
+
+body.index-page .btn:hover {
+  background-color: var(--eth-white);
+  color: var(--eth-dark);
+}
 
 /* =================== Header =================== */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--eth-light);
+  background-color: var(--eth-dark);
   padding: 15px 30px;
   position: fixed;
   width: 100%;
@@ -86,21 +117,14 @@ header nav a:hover {
 }
 
 /* =================== Main Content =================== */
-body {
-  margin: 0;
-  padding-top: 80px; /* space for fixed header */
-  font-family: Arial, sans-serif;
-  background-color: var(--eth-grey);
-}
-
-.container {
+main.container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 50px 20px;
+  padding: 100px 20px 50px; /* Top padding for fixed header */
 }
 
-/* Sections */
-.section {
+/* Sections / Cards */
+.section, .card {
   background-color: var(--eth-white);
   border-radius: 15px;
   margin-bottom: 30px;
@@ -109,35 +133,34 @@ body {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.section img {
+.section img, .card img {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 15px;
 }
 
-.section h2 {
-  color: var(--eth-light);
+.section h2, .card h2 {
+  color: var(--eth-dark);
   margin-bottom: 10px;
 }
 
-.section p {
-  color: #ffffff;
-  line-height: 1.5;
+.section p, .card p {
+  color: #000000;
 }
 
 /* Make sections clickable */
-.section.clickable:hover {
+.section.clickable:hover, .card.clickable:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-.section a {
+.section a, .card a {
   text-decoration: none;
   color: inherit;
   display: block;
 }
 
-/* Footer */
+/* =================== Footer =================== */
 footer {
   text-align: center;
   padding: 20px;
@@ -145,148 +168,25 @@ footer {
   color: var(--eth-white);
 }
 
-body.index-page .overlay-content p {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-  color: var(--eth-white); 
-}
-
-body.index-page .btn {
-  background-color: var(--eth-dark); 
+/* =================== Buttons (general) =================== */
+.btn {
+  display: inline-block;
+  background-color: var(--eth-blue);
   color: var(--eth-white);
-  padding: 15px 30px;
+  padding: 12px 25px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 10px;
   transition: 0.3s;
-  pointer-events: auto; 
 }
 
-body.index-page .btn:hover {
-  background-color: var(--eth-white);
-  color: var(--eth-dark);
+.btn:hover {
+  background-color: var(--eth-dark);
+  color: var(--eth-white);
 }
 
-/* GENERAL STYLES */
-body {
-  margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222;
-  background-color: #f9f9f9;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 3rem;
-  background: #003366;
-  color: white;
-}
-
-header h1 {
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 2rem;
-  font-weight: 500;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-.intro, .info {
-  max-width: 900px;
-  margin: 4rem auto;
-  padding: 0 2rem;
-  line-height: 1.6;
-}
-
-.intro img, .info img {
-  width: 100%;
-  border-radius: 12px;
-  margin-top: 1rem;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
-
-footer {
-  background: #003366;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-/* LANDING PAGE */
-body.landing {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  overflow: hidden;
-}
-
-body.landing::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 110%; height: 110%;
-  background-image: url("assets/bg.jpg");
-  background-size: cover;
-  background-position: center;
-  animation: moveBg 30s ease-in-out infinite alternate;
-  z-index: -2;
-}
-
-.overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 51, 102, 0.5);
-  z-index: -1;
-}
-
-@keyframes moveBg {
-  0% { transform: scale(1) translate(0,0); }
-  100% { transform: scale(1.1) translate(-2%, -2%); }
-}
-
-.content {
-  text-align: center;
-  max-width: 800px;
-  padding: 2rem;
-}
-
-.content h1 {
-  font-size: 4rem;
-  letter-spacing: 3px;
-  margin-bottom: 0.5rem;
-}
-
-.content h2 {
-  font-weight: 300;
-  font-size: 1.4rem;
-  margin-bottom: 2rem;
-}
-
-.button {
-  background: white;
-  color: #003366;
-  padding: 0.8rem 1.6rem;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.button:hover {
-  background: #e6f0ff;
-  transform: translateY(-2px);
+/* =================== Animations =================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
