@@ -1,53 +1,28 @@
-/* Index page with semi-transparent ETH blue overlay */
-body.index-page {
-  height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--eth-blue); /* solid ETH blue */
-  background-image: url('assets/ed-busy.jpg'); /* background image */
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: overlay;
-  /* Overlay effect: blend the blue and image */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EVIDENT Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="index-page">
+  <header>
+    <a href="index.html" class="logo-link">
+      <h1>EVIDENT</h1>
+    </a>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="competition.html">Competition</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-body.index-page .overlay {
-  text-align: center;
-  padding: 50px;
-  border-radius: 15px;
-  animation: fadeIn 2s ease-in-out;
-  color: var(--eth-white);
-}
-
-body.index-page h1 {
-  font-size: 5rem;
-  margin-bottom: 20px;
-}
-
-body.index-page p {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-}
-
-body.index-page .btn {
-  background-color: var(--eth-dark);
-  color: var(--eth-white);
-  padding: 15px 30px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-body.index-page .btn:hover {
-  background-color: var(--eth-white);
-  color: var(--eth-dark);
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+  <div class="overlay">
+    <h1>EVIDENT</h1>
+    <p>Exploring evidence-based design in Emergency Departments</p>
+    <a href="home.html" class="btn">Learn More</a>
+  </div>
+</body>
+</html>
