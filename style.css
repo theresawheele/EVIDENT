@@ -119,8 +119,8 @@ main.container {
 .section, .card {
   background-color: var(--eth-white);
   color: var(--eth-light);
-  border-radius: 15px;
-  margin-bottom: 30px;
+  border-radius: 30px;
+  margin-bottom: 60px;
   padding: 20px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -129,7 +129,7 @@ main.container {
 .section img, .card img {
   width: 100%;
   color: var(--eth-light);
-  border-radius: 10px;
+  border-radius: 30px;
   margin-bottom: 15px;
 }
 
@@ -179,8 +179,4 @@ footer {
   color: var(--eth-white);
 }
 
-/* =================== Animations =================== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+
