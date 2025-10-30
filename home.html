@@ -7,53 +7,53 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Header -->
   <header>
-    <a href="index.html" class="logo-link"><h1>EVIDENT</h1></a>
+    <h1>EVIDENT</h1>
     <nav>
-      <a href="competition.html">Competition</a>
-      <a href="team.html">Team</a>
-      <a href="contact.html">Contact</a>
+      <a href="home.html">Home</a>
+      <a href="#competition">Competition</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- Main content -->
-  <main class="container">
+  <section id="about" class="intro">
+    <h2>About the Project</h2>
+    <p>
+      EVIDENT is an international research project (SNF 2025–2028) led by ETH Zurich, the University of Cambridge, Northumbria University, and healthcare and architecture partners. 
+      We aim to explore how evidence-based design can improve communication and interaction in Emergency Departments (EDs).
+    </p>
+    <p>
+      Our study will use extended reality simulations to test different hospital layouts designed through an international architectural competition.
+      We hypothesize that more intelligible layouts will enhance coordination and teamwork among healthcare workers.
+    </p>
+    <img src="assets/hospital1.jpg" alt="Hospital design concept">
+  </section>
 
-    <!-- Competition Section -->
-    <div class="section clickable">
-      <a href="competition.html">
-        <img src="assets/layout.jpg" alt="Competition Design">
-        <h2>Competition</h2>
-        <p>Click here to see the architectural competition details.</p>
-      </a>
-    </div>
+  <section id="competition" class="info">
+    <h2>Architectural Competition</h2>
+    <p>
+      The competition will be open to both professional architects and students, who will design future-ready Emergency Departments. 
+      Winning designs will be tested using tracking technologies, wearable sensors, and simulated hospital environments.
+    </p>
+    <img src="assets/layout.jpg" alt="Layout design">
+  </section>
 
-    <!-- Team Section -->
-    <div class="section clickable">
-      <a href="team.html">
-        <img src="assets/team.jpg" alt="Our Team">
-        <h2>Team</h2>
-        <p>Click here to meet our team members.</p>
-      </a>
-    </div>
+  <section id="team" class="info">
+    <h2>Our Team</h2>
+    <p>
+      The EVIDENT consortium brings together experts in cognitive science, healthcare design, and architecture from leading institutions including ETH Zurich, University of Cambridge, and Northumbria University.
+    </p>
+    <img src="assets/team.jpg" alt="Team collaboration">
+  </section>
 
-    <!-- Contact Section -->
-    <div class="section clickable">
-      <a href="contact.html">
-        <img src="assets/hospital1.jpg" alt="Contact">
-        <h2>Contact</h2>
-        <p>Click here to get in touch with us.</p>
-      </a>
-    </div>
+  <section id="contact" class="info">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:evident@ethz.ch">evident@ethz.ch</a></p>
+  </section>
 
-  </main>
-
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 EVIDENT Project | ETH Zurich</p>
   </footer>
-
 </body>
 </html>
