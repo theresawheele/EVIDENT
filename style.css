@@ -113,6 +113,7 @@ main.container {
   max-width: 1200px;
   margin: 2 auto;
  color: #000000;
+  align-items: center;
   padding: 100px 20px 50px; /* Top padding for fixed header */
 }
 
@@ -155,7 +156,7 @@ main.container {
 
 .section a, .card a {
   text-decoration: none;
-  color: inherit;
+  color: #000000;
   align-items: center;
   display: block;
 }
