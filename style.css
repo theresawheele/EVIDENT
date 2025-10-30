@@ -172,6 +172,7 @@ footer {
 /* =================== Buttons (general) =================== */
 .btn {
   display: inline-block;
+   align-items: center;
   background-color: var(--eth-blue);
   color: var(--eth-white);
   padding: 12px 25px;
