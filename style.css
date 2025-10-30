@@ -126,6 +126,7 @@ main.container {
 /* Sections / Cards */
 .section, .card {
   background-color: var(--eth-white);
+  color: var(--eth-light);
   border-radius: 15px;
   margin-bottom: 30px;
   padding: 20px;
