@@ -9,8 +9,8 @@
 
 /* =================== Global Styles =================== */
 * {
-  margin: 30;
-  padding: 30;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
@@ -23,7 +23,7 @@ body {
 
 /* =================== Index Page (Splash) =================== */
 body.index-page {
-  height: 100vh;
+  height: calc(100vh - 70px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,7 +111,7 @@ header nav a:hover {
 /* =================== Main Content =================== */
 main.container {
   max-width: 1200px;
-  margin: 2 auto;
+  margin: 0 auto;
  color: #000000;
   align-items: center;
   padding: 100px 20px 50px; /* Top padding for fixed header */
