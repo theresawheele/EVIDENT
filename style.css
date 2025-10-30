@@ -128,6 +128,7 @@ main.container {
 
 .section img, .card img {
   width: 100%;
+  color: var(--eth-light);
   border-radius: 10px;
   margin-bottom: 15px;
 }
