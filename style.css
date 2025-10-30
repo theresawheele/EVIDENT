@@ -122,6 +122,7 @@ main.container {
   color: var(--eth-dark);
   border-radius: 30px;
   margin-bottom: 60px;
+ align-items: center;
   padding: 100px 20px 50px; /* Top padding for fixed header */
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -131,15 +132,18 @@ main.container {
   width: 100%;
   color: var(--eth-dark);
   border-radius: 30px;
+  align-items: center;
   margin-bottom: 15px;
 }
 
 .section h2, .card h2 {
   color: var(--eth-dark);
+  align-items: center;
   margin-bottom: 10px;
 }
 
 .section p, .card p {
+  align-items: center;
   color: var(--eth-dark);
 }
 
@@ -152,6 +156,7 @@ main.container {
 .section a, .card a {
   text-decoration: none;
   color: inherit;
+  align-items: center;
   display: block;
 }
 
