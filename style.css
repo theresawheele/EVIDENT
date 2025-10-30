@@ -27,7 +27,7 @@ body.index-page {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--eth-light); #e6f0ff /* Light ETH blue */
+  background-color: var(--eth-light); /* Light ETH blue */
   background-image: url('assets/ed-busy.jpg'); /* Optional background image */
   background-size: cover;
   background-position: center;
@@ -68,7 +68,7 @@ body.index-page p {
 }
 
 body.index-page .btn {
-  background-color: var(--eth-dark);
+  background-color: var(--eth-light);
   color: var(--eth-white);
   padding: 15px 30px;
   text-decoration: none;
