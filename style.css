@@ -28,7 +28,7 @@ body.index-page {
   justify-content: center;
   align-items: center;
   background-color: var(--eth-light); /* Light ETH blue */
-  background-image: url('assets/ed-busy.jpg'); /* Optional background image */
+
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay; 
