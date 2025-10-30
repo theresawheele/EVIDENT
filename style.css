@@ -145,7 +145,7 @@ main.container {
 }
 
 .section p, .card p {
-  color: #000000;
+  color: var(--eth-light);
 }
 
 /* Make sections clickable */
