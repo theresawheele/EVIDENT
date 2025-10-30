@@ -1,33 +1,43 @@
+/* =================== ETH Colors =================== */
+:root {
+  --eth-dark: #00274d;
+  --eth-blue: #0071ce;
+  --eth-light: #e6f0fa;
+  --eth-grey: #f7f7f7;
+  --eth-white: #ffffff;
+}
+
 /* =================== Index Page Hero =================== */
 body.index-page {
   height: 100vh;
-  background-color: var(--eth-blue);
-  background-image: url('assets/ed-busy.jpg');
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--eth-blue);  
+  background-image: url('assets/ed-busy.jpg'); /* optional image */
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay; 
   position: relative;
+  font-family: Arial, sans-serif;
 }
 
-/* Overlay is just visual, not blocking clicks */
 body.index-page .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 39, 77, 0.6);
-  pointer-events: none; /* <-- THIS IS CRUCIAL */
-  z-index: 1;
+  background-color: rgba(0, 39, 77, 0.6); /* dark overlay */
+  pointer-events: none;
 }
 
-/* Only the content inside overlay is clickable/selectable */
 body.index-page .overlay-content {
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 50px 30px;
-  color: var(--eth-white);
+  color: var(--eth-white);  /* ETH white text */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,58 +53,21 @@ body.index-page .overlay-content h1 {
 body.index-page .overlay-content p {
   font-size: 1.5rem;
   margin-bottom: 30px;
+  color: var(--eth-white);  /* ensure subtitle is white */
 }
 
 body.index-page .btn {
-  background-color: var(--eth-dark);
+  background-color: var(--eth-dark); /* dark ETH blue */
   color: var(--eth-white);
   padding: 15px 30px;
   text-decoration: none;
   font-weight: bold;
   border-radius: 10px;
   transition: 0.3s;
-  z-index: 3;
+  pointer-events: auto; /* make button clickable */
 }
 
 body.index-page .btn:hover {
   background-color: var(--eth-white);
   color: var(--eth-dark);
-}
-
-/* =================== Header =================== */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--eth-dark);
-  padding: 15px 30px;
-  position: fixed;
-  width: 100%;
-  z-index: 10; /* above overlay */
-}
-
-.logo-link {
-  text-decoration: none;
-  color: var(--eth-white);
-  display: flex;
-  align-items: center;
-}
-
-.logo-link h1 {
-  margin: 0;
-}
-
-.logo-link:hover {
-  color: var(--eth-blue);
-}
-
-header nav a {
-  color: var(--eth-white);
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-header nav a:hover {
-  color: var(--eth-blue);
 }
