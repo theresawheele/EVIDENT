@@ -97,15 +97,6 @@ header {
   color: var(--eth-blue);
 }
 
-body.index-page {
-  height: calc(100vh - 80px); 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--eth-light);
-  padding-top: 80px; 
-}
-
 header .logo-link {
   text-decoration: none;
   color: var(--eth-white);
@@ -133,6 +124,15 @@ main.container {
  color: #000000;
   align-items: center;
   padding: 100px 20px 50px; /* Top padding for fixed header */
+}
+
+body.index-page {
+  height: calc(100vh - 80px); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--eth-light);
+  padding-top: 80px; 
 }
 
 /* Sections / Cards */
