@@ -70,7 +70,7 @@ body.index-page .btn {
 }
 
 body.index-page .btn:hover {
-  background-color: var(--eth-white);
+  background-color: var(--eth-blue);
   color: var(--eth-light);
 }
 
