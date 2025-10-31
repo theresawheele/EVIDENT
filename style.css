@@ -180,11 +180,19 @@ body.index-page {
 }
 
 /* =================== Footer =================== */
+
 footer {
-  text-align: center;
-  padding: 20px;
+  width: 100%;
   background-color: var(--eth-dark);
   color: var(--eth-white);
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* optional for side breathing room */
 }
 
 /* =================== Buttons (general) =================== */
