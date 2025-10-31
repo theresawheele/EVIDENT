@@ -88,6 +88,15 @@ header {
   z-index: 10;
 }
 
+body.index-page {
+  height: calc(100vh - 80px); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--eth-light);
+  padding-top: 80px; 
+}
+
 header .logo-link {
   text-decoration: none;
   color: var(--eth-white);
